@@ -1,37 +1,91 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xiaohuasheng105의 블로그</title>
+    <title>xiaohuasheng105 | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>xiaohuasheng105의 블로그</h1>
-        <nav>
+    <header class="site-header">
+        <a class="logo" href="index.html">xiaohuasheng105</a>
+        <nav aria-label="Main menu">
             <ul>
-                <li><a href="index.html">홈</a></li>
-                <li><a href="about.html">소개</a></li>
-                <li><a href="contact.html">연락처</a></li>
+                <li><a href="index.html" aria-current="page">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="posts">
-            <h2>최근 포스트</h2>
-            <article>
-                <h3><a href="posts/first-post.html">첫 번째 포스트</a></h3>
-                <p>블로그의 첫 번째 포스트입니다. 환영합니다!</p>
-                <time datetime="2026-05-06">2026년 5월 6일</time>
-            </article>
-            <!-- 더 많은 포스트를 여기에 추가 -->
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Portfolio</p>
+                <h1>I build clear interfaces and practical software.</h1>
+                <p class="hero-text">This site is a portfolio for projects, experiments, and learning notes. The focus is on what I have made, how I think, and what I am improving next.</p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#projects">View Projects</a>
+                    <a class="button secondary" href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="profile-visual" aria-label="Portfolio profile graphic">
+                <div class="profile-card">
+                    <span class="profile-mark">XH</span>
+                    <p>Frontend / C/C++ / Problem Solving</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2>Recent Projects</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-media cube" aria-hidden="true"></div>
+                    <div class="project-body">
+                        <p class="project-type">C++ Project</p>
+                        <h3>CubeCube</h3>
+                        <p>A project for exploring cube-related logic, structure, and algorithmic problem solving.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-media web" aria-hidden="true"></div>
+                    <div class="project-body">
+                        <p class="project-type">Web</p>
+                        <h3>Personal Portfolio</h3>
+                        <p>A refreshed personal site that presents work, profile, and contact details before blog-style posts.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-media study" aria-hidden="true"></div>
+                    <div class="project-body">
+                        <p class="project-type">Study Log</p>
+                        <h3>Learning Notes</h3>
+                        <p>Short records of concepts, implementation details, and problem-solving habits gathered while learning.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section split">
+            <div>
+                <p class="eyebrow">Focus</p>
+                <h2>What I Work On</h2>
+            </div>
+            <ul class="skill-list">
+                <li>Clean web interfaces</li>
+                <li>Data structures and algorithms</li>
+                <li>C/C++ problem solving</li>
+                <li>Steady technical notes</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 xiaohuasheng105. All rights reserved.</p>
+        <p>&copy; 2026 xiaohuasheng105. Portfolio.</p>
     </footer>
 
     <script src="js/script.js"></script>
