@@ -1,93 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xiaohuasheng105 | Portfolio</title>
+    <meta name="description" content="개발과 문제 해결 과정을 기록하는 xiaohuasheng105의 기술 블로그">
+    <title>xiaohuasheng105의 개발 블로그</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="site-header">
-        <a class="logo" href="index.html">xiaohuasheng105</a>
-        <nav aria-label="Main menu">
-            <ul>
-                <li><a href="index.html" aria-current="page">Work</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-inner">
+            <a class="logo" href="index.html">
+                <strong>xiaohuasheng105</strong>
+                <span>코드로 배우고, 글로 남깁니다.</span>
+            </a>
+            <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-menu">메뉴</button>
+            <nav id="main-menu" aria-label="주요 메뉴">
+                <a href="index.html" aria-current="page">홈</a>
+                <a href="#posts">글</a>
+                <a href="#categories">카테고리</a>
+                <a href="about.html">소개</a>
+                <a href="contact.html">연락처</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">Portfolio</p>
-                <h1>I build clear interfaces and practical software.</h1>
-                <p class="hero-text">This site is a portfolio for projects, experiments, and learning notes. The focus is on what I have made, how I think, and what I am improving next.</p>
-                <div class="hero-actions">
-                    <a class="button primary" href="#projects">View Projects</a>
-                    <a class="button secondary" href="contact.html">Contact</a>
-                </div>
+    <main class="layout">
+        <section class="content" id="posts">
+            <div class="page-heading">
+                <p class="eyebrow">Latest Posts</p>
+                <h1>최근 글</h1>
+                <p>개발하면서 배운 내용과 문제를 해결한 과정을 기록합니다.</p>
             </div>
-            <div class="profile-visual" aria-label="Portfolio profile graphic">
-                <div class="profile-card">
-                    <span class="profile-mark">XH</span>
-                    <p>Frontend / C/C++ / Problem Solving</p>
-                </div>
+
+            <label class="search">
+                <span class="sr-only">글 검색</span>
+                <input id="post-search" type="search" placeholder="제목이나 태그로 글 검색">
+            </label>
+
+            <div class="post-list">
+                <article class="post-card" data-search="첫 번째 포스트 블로그 시작 기록">
+                    <div class="post-meta">
+                        <time datetime="2026-06-09">2026. 06. 09.</time>
+                        <a href="#categories">기록</a>
+                    </div>
+                    <h2><a href="posts/first-post.html">블로그를 시작합니다</a></h2>
+                    <p>새롭게 정리한 기술 블로그를 소개합니다. 앞으로 공부한 내용과 프로젝트의 시행착오를 차근차근 남길 예정입니다.</p>
+                    <div class="post-footer">
+                        <div class="tags"><span>#블로그</span><span>#기록</span></div>
+                        <a class="read-more" href="posts/first-post.html">더 읽기 →</a>
+                    </div>
+                </article>
+
+                <article class="post-card" data-search="CubeCube C++ 프로젝트 알고리즘">
+                    <div class="post-meta">
+                        <time datetime="2026-05-23">2026. 05. 23.</time>
+                        <a href="#categories">프로젝트</a>
+                    </div>
+                    <h2><a href="#">CubeCube 프로젝트 기록</a></h2>
+                    <p>큐브 관련 로직을 C++로 구현하며 고민한 자료구조와 알고리즘을 정리합니다.</p>
+                    <div class="post-footer">
+                        <div class="tags"><span>#C++</span><span>#CubeCube</span></div>
+                        <span class="coming-soon">작성 예정</span>
+                    </div>
+                </article>
+
+                <article class="post-card" data-search="웹사이트 GitHub Pages HTML CSS">
+                    <div class="post-meta">
+                        <time datetime="2026-05-06">2026. 05. 06.</time>
+                        <a href="#categories">Web</a>
+                    </div>
+                    <h2><a href="#">GitHub Pages로 개인 사이트 만들기</a></h2>
+                    <p>HTML과 CSS로 정적 사이트를 만들고 GitHub Pages에 배포하는 과정을 정리할 예정입니다.</p>
+                    <div class="post-footer">
+                        <div class="tags"><span>#HTML</span><span>#CSS</span></div>
+                        <span class="coming-soon">작성 예정</span>
+                    </div>
+                </article>
             </div>
+            <p class="empty-message" hidden>검색 결과가 없습니다.</p>
         </section>
 
-        <section class="section" id="projects">
-            <div class="section-heading">
-                <p class="eyebrow">Selected Work</p>
-                <h2>Recent Projects</h2>
-            </div>
-            <div class="project-grid">
-                <article class="project-card">
-                    <div class="project-media cube" aria-hidden="true"></div>
-                    <div class="project-body">
-                        <p class="project-type">C++ Project</p>
-                        <h3>CubeCube</h3>
-                        <p>A project for exploring cube-related logic, structure, and algorithmic problem solving.</p>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-media web" aria-hidden="true"></div>
-                    <div class="project-body">
-                        <p class="project-type">Web</p>
-                        <h3>Personal Portfolio</h3>
-                        <p>A refreshed personal site that presents work, profile, and contact details before blog-style posts.</p>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <div class="project-media study" aria-hidden="true"></div>
-                    <div class="project-body">
-                        <p class="project-type">Study Log</p>
-                        <h3>Learning Notes</h3>
-                        <p>Short records of concepts, implementation details, and problem-solving habits gathered while learning.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <aside class="sidebar">
+            <section class="profile-card">
+                <div class="avatar" aria-hidden="true">XH</div>
+                <h2>xiaohuasheng105</h2>
+                <p>프로그래밍과 문제 해결을 공부하며 배운 것을 기록합니다.</p>
+                <a class="github-link" href="https://github.com/xiaohuasheng105">GitHub 방문하기</a>
+            </section>
 
-        <section class="section split">
-            <div>
-                <p class="eyebrow">Focus</p>
-                <h2>What I Work On</h2>
-            </div>
-            <ul class="skill-list">
-                <li>Clean web interfaces</li>
-                <li>Data structures and algorithms</li>
-                <li>C/C++ problem solving</li>
-                <li>Steady technical notes</li>
-            </ul>
-        </section>
+            <section class="side-card" id="categories">
+                <h2>카테고리</h2>
+                <ul class="category-list">
+                    <li><a href="#posts"><span>알고리즘</span><strong>0</strong></a></li>
+                    <li><a href="#posts"><span>프로젝트</span><strong>1</strong></a></li>
+                    <li><a href="#posts"><span>Web</span><strong>1</strong></a></li>
+                    <li><a href="#posts"><span>기록</span><strong>1</strong></a></li>
+                </ul>
+            </section>
+
+            <section class="side-card">
+                <h2>태그</h2>
+                <div class="tag-cloud">
+                    <a href="#posts">C++</a>
+                    <a href="#posts">알고리즘</a>
+                    <a href="#posts">HTML</a>
+                    <a href="#posts">CSS</a>
+                    <a href="#posts">프로젝트</a>
+                </div>
+            </section>
+        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 xiaohuasheng105. Portfolio.</p>
+        <p>© 2026 xiaohuasheng105. Powered by GitHub Pages.</p>
     </footer>
-
     <script src="js/script.js"></script>
 </body>
 </html>
